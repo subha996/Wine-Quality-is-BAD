@@ -1,0 +1,4 @@
+dvc
+dvc[gdrive]
+pandas
+sklearn
