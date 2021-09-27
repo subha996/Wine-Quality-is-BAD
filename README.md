@@ -25,3 +25,8 @@ dvc init
 dvc add data_given/winequality.csv
 ```
 
+## To see the git command go to this repository 
+```bash 
+https://github.com/subha996/test_git_tuet/blob/master/readme.md
+```
+
