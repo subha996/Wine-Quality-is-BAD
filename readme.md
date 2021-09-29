@@ -12,7 +12,7 @@ on terminal
 
 
 
-to run pwd package
+to run pwd package or local package install
 
 ```bash
 pip install -e .

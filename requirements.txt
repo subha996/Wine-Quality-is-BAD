@@ -1,3 +1,7 @@
+# local packages install
+-e .
+
+# third party packages install
 dvc
 dvc[gdrive]
 pandas
