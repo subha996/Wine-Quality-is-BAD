@@ -10,3 +10,19 @@ tox -r
 ``` 
 on terminal
 
+
+
+to run pwd package
+
+```bash
+pip install -e .
+
+```
+
+create tar file for other machine install -- on terminal
+
+```
+python setup.py sdist bdist_wheel
+
+``` 
+Note: the dist file is missing on repository
