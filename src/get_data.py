@@ -11,7 +11,7 @@ def read_params(config_path):
     """This functon will read the yaml file and 
         will return a dictionary."""
     with open(config_path, 'r') as ymlfile:
-        config = yaml.safe_load(ymlfile)
+        config = yaml.safe_load(ymlfile) # reading the yaml file as dictionary
     return config
 
 
