@@ -4,6 +4,7 @@
 
 import os
 import warnings
+warnings.filterwarnings("ignore") # ignore warnings
 import sys
 import pandas as pd
 import numpy as np
