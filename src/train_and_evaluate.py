@@ -56,8 +56,47 @@ def train_and_evaluate(config_path):
     pred = lr.predict(X_test)
     (rmse, mae, r2) = eval_metrics(y_test, pred)
 
+    # Showing metrics on terminal.
+    print("Elasticnet model (alpha=%f, l1_ratio=%f):" % (alpha, l1_ratio))
+    print("  RMSE: %s" % rmse)
+    print("  MAE: %s" % mae)
+    print("  R2: %s" % r2)
+
+    ##################################################
+    # Storing metrics on json file
+    # files path
+    scores_file = config["reports"]["scores"]
+    params_file = config["reports"]["params"]
+
+    # creating a dictionary with metrics
+    with open(scores_file, "w") as f:
+        scores = {
+            "rmse": rmse,
+            "mae": mae,
+            "r2": r2
+        }
+        json.dump(scores, f, indent=4)
+
+    # creating a dictionary with params
+    with open(params_file, "w") as f:
+        params = {
+            "alpha": alpha,
+            "l1_ratio": l1_ratio,
+        }
+        json.dump(params, f, indent=4)
+#####################################################
+
+    # saving the model
+    os.makedirs(model_dir, exist_ok=True)
+    model_path = os.path.join(model_dir, "model.pkl")
+    joblib.dump(lr, model_path) # saving the model
+
+
+
+
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("--config", default="params.yaml")
     parsed_args = args.parse_args()
+    train_and_evaluate(parsed_args.config)
     
