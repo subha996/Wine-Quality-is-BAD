@@ -1,6 +1,6 @@
 action: GLOB, msg: packaging
 cwd: E:\MLOPS Day 2\Wine Quality is BAD
-cmd: 'e:\anaconda3\envs\wineq\python.exe' setup.py sdist --formats=zip --dist-dir 'E:\MLOPS Day 2\Wine Quality is BAD\.tox\dist'
+cmd: 'e:\anaconda3\envs\wineq\python.exe' setup.py sdist --formats=zip --dist-dir '.tox\dist'
 running sdist
 running egg_info
 writing src.egg-info\PKG-INFO
@@ -32,8 +32,7 @@ copying tests\__init__.py -> src-0.0.1\tests
 copying tests\conftest.py -> src-0.0.1\tests
 copying tests\test_config.py -> src-0.0.1\tests
 Writing src-0.0.1\setup.cfg
-creating E:\MLOPS Day 2\Wine Quality is BAD\.tox\dist
-creating 'E:\MLOPS Day 2\Wine Quality is BAD\.tox\dist\src-0.0.1.zip' and adding 'src-0.0.1' to it
+creating '.tox\dist\src-0.0.1.zip' and adding 'src-0.0.1' to it
 adding 'src-0.0.1'
 adding 'src-0.0.1\src'
 adding 'src-0.0.1\src.egg-info'

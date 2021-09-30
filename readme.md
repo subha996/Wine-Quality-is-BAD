@@ -26,3 +26,9 @@ python setup.py sdist bdist_wheel
 
 ``` 
 Note: the dist file is missing on repository
+
+```
+flake8
+
+``` 
+is library to formatting the code. by following pep8 standerd

@@ -16,3 +16,8 @@ def test_generic():
             raise NotInRange
         else:
             print("Value is in range")
+
+def test_another():
+    a = 3
+    b = 3
+    assert a == b
