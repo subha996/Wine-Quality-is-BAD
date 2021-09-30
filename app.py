@@ -50,7 +50,7 @@ def index():
                 response = api_response(request)
                 return jsonify(response)
         except Exception as e:
-            error = {"error": "ERROR: SOMETHING WENT WRONG!! Try Againg"}
+            error = {"error": " SOMETHING WENT WRONG!! Try Againg"}
             return render_template("404.html", error=error) 
             
     else:
